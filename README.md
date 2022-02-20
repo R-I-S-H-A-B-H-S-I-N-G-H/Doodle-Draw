@@ -1,6 +1,6 @@
 # Doodle-Draw
 the website is hosted at this url : 
-https://d00dle-draw.web.app/
+https://doodledraw.pages.dev/
 
 
 Computer Vision is a field of Artificial Intelligence and Computer Science that deals with how computers can be made to gain an understanding of digital images and videos. With the advances in machine learning technology, innovations in Image Processing are emerging rapidly and being leveraged by businesses all around the world. Applications of Computer Vision include:
