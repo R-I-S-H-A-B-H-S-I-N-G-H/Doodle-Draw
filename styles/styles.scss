@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 30vh;
+  min-height: 10rem;
+  background: rgb(199, 120, 199);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: 200ms ease-in-out;
+  header {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    background: violet;
+    padding: 0.5rem;
+    margin: 0.1rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 0.2rem;
+    border-color: darkmagenta;
+    transition: 400ms ease-in-out;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    &:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+  }
+}
+// lower area of nav bar with buttons
+.lowernavbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .pallet {
+    height: clamp(5rem, 55%, 8rem);
+    background: lightseagreen;
+    padding: 0.5rem;
+    margin: 0.4rem;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 0.15rem;
+    border-color: darkmagenta;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 400ms ease-in-out;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .clearBTN {
+      background: rgb(255, 148, 148);
+      padding: 0.3rem;
+      margin: 0.2rem;
+      border-radius: 0.4rem;
+      border-style: solid;
+      border-width: 0.1rem;
+      border-color: red;
+      transition: 200ms ease-in-out;
+      &:hover {
+        cursor: pointer;
+        background: red;
+        color: white;
+      }
+    }
+    .predict {
+      background: lightgreen;
+      padding: 0.3rem;
+      margin: 0.2rem;
+      border-radius: 0.4rem;
+      border-style: solid;
+      border-width: 0.1rem;
+      border-color: darkgreen;
+      transition: 200ms ease-in-out;
+      &:hover {
+        cursor: pointer;
+        background: darkgreen;
+        color: white;
+      }
+    }
+  }
+  .prediction {
+    height: clamp(5rem, 55%, 8rem);
+
+    background: rgb(231, 142, 142);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 0.15rem;
+    border-color: darkred;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .pTitle {
+      font-size: clamp(1rem, 3vw, 2rem);
+    }
+  }
+}

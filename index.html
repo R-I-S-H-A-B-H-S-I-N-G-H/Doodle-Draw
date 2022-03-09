@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Doodle Classifier</title>
-		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="sketch.js"></script>
-		<link rel="stylesheet" href="styles.css"
-		/>
-		<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-</style>
-	</head>
-	<body>
-		<div class="everything">
-			<div class="titleWrapper">
-				<div class="title">Doodle Classifier</div>
-			</div>
-			
-			<div id="canvas">
-				<!-- canavs goes here -->
-			</div>
-			
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doodle Classifier</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"
+      integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <header>
+        <div class="title">
+          <a
+            target="/"
+            href="https://github.com/R-I-S-H-A-B-H-S-I-N-G-H/Doodle-Draw"
+          >
+            Doodle Classifier
+          </a>
+        </div>
+      </header>
+      <div class="lowernavbar">
+        <div class="pallet">
+          <div class="buttonArea">
+            <button class="clearBTN" onclick="clearScreen()">Clear</button>
+            <!-- <button class="boundingBTN" onclick="drawBoundingbox()">
+              Get Get Bounding Box
+            </button> -->
+            <button class="predict" onclick="predict()">Predict</button>
+          </div>
+          <div class="sliderArea">
+            <div id="strokeValDisp">Stroke Weight</div>
+            <input
+              type="range"
+              min="18"
+              max="30"
+              value="18"
+              class="slider"
+              id="strokeSize"
+            />
+          </div>
+        </div>
 
-			<div class="Pallet">
-			<div class="buttonArea">
-				<button class="clearBTN" onclick="clearScreen()">Clear</button>
-				<button class="boundingBTN" onclick="drawBoundingbox()">
-					Get Get Bounding Box
-				</button>
-				<button class="boundingBTN" onclick="predict()">Predict</button>
-
-			</div>
-			<div class="sliderArea">
-				<div id='strokeValDisp'>Stroke Weight</div>
-				<input type="range" min="5" max="30" value="12" class="slider" id="strokeSize">
-			</div>
-			
-			<div class="prediction">
-				<div>I think its a</div>
-				<div id="predictRes" class="Presult"></div>
-			</div>
-			</div>
-		</div>
-
-
-	</body>
+        <div class="prediction">
+          <div class="pTitle">Prediction</div>
+          <div id="predictRes" class="Presult"></div>
+        </div>
+      </div>
+    </div>
+    <div id="canvas">
+      <!-- canavs goes here -->
+    </div>
+  </body>
 </html>
