@@ -1,5 +1,6 @@
 var nn;
 var canPredict = false;
+var canvas;
 labelmap = [
   "zero",
   "one",
@@ -38,7 +39,7 @@ async function setup() {
   slider = document.getElementById("strokeSize");
   sliderText = document.getElementById("strokeValDisp");
   pixelDensity(1);
-  const canvas = createCanvas(innerWidth, innerHeight * 0.68);
+  canvas = createCanvas(innerWidth * 0.5, innerHeight * 0.5);
   canvas.parent("canvas");
   background(bgcolor);
   // document.getElementById('predictRes').innerText = '';
@@ -70,7 +71,7 @@ async function predict() {
   nn.predict(xs)
     .data()
     .then((result) => {
-      var r = result;
+      // var r = result;
       var t = Math.max(...result);
       var prcnt = Math.round(t * 1000) / 10;
       // console.log(r);
@@ -191,4 +192,9 @@ function drawBoundingbox() {
   stroke(255 - bgcolor);
   strokeWeight(2);
   rect(boundingbox.x, boundingbox.y, boundingbox.width, boundingbox.height);
+}
+
+function windowResized() {
+  background(bgcolor);
+  // canvas.resize(innerWidth * 0.5, innerHeight * 0.5);
 }
